@@ -5,7 +5,7 @@ const Student = require ('../models/students');
 
 
 routes.get('/students',(req, res) =>{
-    res.send({type:'Get Request'});
+    res.send(req.body);
 });
 
 //add students

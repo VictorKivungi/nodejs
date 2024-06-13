@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const studentSchema = new Schema({
   firstname: {
     type: String,
-    // required: [true, "Firstname is required"],
+    required: [true, "Firstname is required"],
   },
   lastname: {
     type: String,
-    // required: [true, "Lastname is required"],
+    required: [true, "Lastname is required"],
   },
   gender: {
     type: String,
