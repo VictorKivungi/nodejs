@@ -1,6 +1,6 @@
 const express = require ('express');
 const routes = express.Router();
-const Student = require ('./models/students');
+const Student = require ('../models/students');
 
 
 
@@ -11,9 +11,10 @@ routes.get('/students',(req, res) =>{
 //add students
 routes.post('/addstudents', async(req, res, next)=>{
 
+    const { firstname, lastname, gender } = req.body;
 
     try{
-        const student = new Student(req.body);
+        const student = new Student({firstname, lastname, gender});
         const result = await student.save();
         res.send(result);
     } catch (error){
