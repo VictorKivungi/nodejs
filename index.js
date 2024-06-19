@@ -1,5 +1,5 @@
 const express = require ('express');
-const routes = require ('./routes/api');
+const routes = require ('./routes/studentRoute');
 
 require ('dotenv').config();
 require ('./helpers/init_mongodb');
