@@ -4,11 +4,8 @@ const Student = require ('../models/students');
 const studentController = require('../controller/studentController');
 
 
-
-routes.get('/students',(req, res) =>{
-    res.send(req.body);
-});
-
+// search specific student
+routes.get('/getStudent/:id', studentController.getStudent);
 //add students
 routes.post('/addStudent', studentController.addStudent);
 
